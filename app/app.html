@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>FECS Editor</title>
+    <link rel="stylesheet" href="/src/css/main.css">
+</head>
+<body>
+<div class="container">
+    <div class="fecs-editor-wrap full" id="editor">
+        <div class="fecs-nav">
+            <ul class="nav-list">
+                <li class="nav-btn nav-btn-menu first">
+                    <a class="menu-btn" title="menu"><i></i></a>
+                    <dl class="menu-list">
+                        <dd class="menu-item">
+                            <a class="menu-link format-btn">Format<span>Ctrl Shift F</span></a>
+                        </dd>
+                        <dd class="menu-item">
+                            <a class="menu-link">Change Reporter<i class="arrow-right"></i></a>
+                            <dl class="menu-sub-list">
+                                <dd class="menu-sub-item">
+                                    <a class="select menu-sub-link reporter-btn" data-type="1"><i class="check"></i>Default</a>
+                                </dd>
+                                <dd class="menu-sub-item">
+                                    <a class="menu-sub-link reporter-btn" data-type="2"><i class="check"></i>Baidu</a>
+                                </dd>
+                            </dl>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="nav-item cur" data-for="javascript"><a>Javascript</a></li>
+                <li class="nav-item" data-for="css"><a>CSS</a></li>
+                <li class="nav-item" data-for="html"><a>HTML</a></li>
+                <li class="nav-item" data-for="less"><a>Less</a></li>
+            </ul>
+        </div>
+        <div class="fecs-editor" id="javascript-editor"></div>
+        <div class="fecs-editor" id="css-editor" style="display:none;"></div>
+        <div class="fecs-editor" id="html-editor" style="display:none;"></div>
+        <div class="fecs-editor" id="less-editor" style="display:none;"></div>
+        <div class="fecs-console-wrap">
+            <div class="fecs-console" id="javascript-console"><div>fecs <span class="info">INFO</span> Congratulations! Everything is OK!</div></div>
+            <div class="fecs-console" id="css-console" style="display:none;"><div>fecs <span class="info">INFO</span> Congratulations! Everything is OK!</div></div>
+            <div class="fecs-console" id="html-console" style="display:none;"><div>fecs <span class="info">INFO</span> Congratulations! Everything is OK!</div></div>
+            <div class="fecs-console" id="less-console" style="display:none;"><div>fecs <span class="info">INFO</span> Congratulations! Everything is OK!</div></div>
+        </div>
+    </div>
+</div>
+<script src="/dep/jquery-2.1.4.min.js"></script>
+<script src="/dep/ace/ace.min.js"></script>
+<script src="/dep/ace/theme-monokai.js"></script>
+<script src="/dep/ace/mode-javascript.js"></script>
+<script src="/dep/ace/mode-css.js"></script>
+<script src="/dep/ace/mode-html.js"></script>
+<script src="/dep/ace/mode-less.js"></script>
+<script src="/src/main.js"></script>
+</body>
+</html>

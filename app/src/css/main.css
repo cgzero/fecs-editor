@@ -1,0 +1,359 @@
+/* reset start */
+body,
+h1, h2, h3, h4, h5, h6, hr,
+p, blockquote, pre,
+dl, dt, dd,
+ul, ol, li,
+button, input, textarea,
+th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 12px/1 Tahoma, Helvetica, Arial, sans-serif;
+}
+/* reset end */
+
+/* common start */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@keyframes changeOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes changeOpacityReverse {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+/* common end */
+
+/* biz start */
+.fecs-editor {
+    background-color: #272822;
+    color: #272822;
+    font-size: 14px !important;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    width: 1000px;
+}
+
+.fecs-editor .ace_active-line {
+    background-color: transparent !important;
+}
+
+.fecs-editor .ace_gutter {
+    background-color: #272822 !important;
+}
+
+.fecs-editor .ace_gutter-active-line {
+    background-color: #3e3d32 !important;
+}
+
+.fecs-editor .ace_tooltip {
+    animation: changeOpacity 0.2s;
+    background-color: #282828;
+    border: 2px solid #414141;
+    border-radius: 0;
+    box-shadow: none;
+    color: #787878;
+    max-width: 800px;
+    padding: 5px 15px;
+}
+
+.fecs-editor .ace_gutter-cell.ace_error {
+    background: url("../img/icon_editor.png") -97px 3px no-repeat;
+}
+
+.fecs-slogan {
+    color: #fff;
+    font-family: "fzyxjt", Tahoma, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.fecs-slogan .slogan-title {
+    font-size: 60px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.fecs-slogan .slogan-content {
+    color: #d2c9d4;
+    font-size: 36px;
+}
+
+.fecs-editor-wrap {
+    margin: 60px auto 80px;
+    overflow: hidden;
+    width: 1000px;
+}
+
+.fecs-editor-wrap.full {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.fecs-editor-wrap.full .fecs-editor {
+    width: 100%;
+}
+
+.fecs-editor-wrap.full .fecs-console-wrap {
+    bottom: 0;
+    height: 92px;
+    left: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    z-index: 99;
+}
+
+.fecs-nav {
+    background-color: #1f1f1f;
+    font-size: 14px;
+    position: relative;
+}
+
+.fecs-nav .nav-list {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fecs-nav .nav-list:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.fecs-nav .nav-list .nav-btn.first {
+    float: left;
+    position: relative;
+}
+
+.fecs-nav .nav-list .nav-btn.last {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.fecs-nav .nav-list .nav-item {
+    float: left;
+}
+
+.fecs-nav .nav-list .nav-item a {
+    background-color: #1f1f1f;
+    color: #999;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 30px;
+    transition: all 0.1s;
+}
+
+.fecs-nav .nav-list .nav-item:hover a {
+    background-color: #313131;
+    color: #fff;
+    text-decoration: none;
+}
+
+.fecs-nav .nav-list .nav-item.cur a {
+    background-color: #282828;
+    color: #fff;
+    text-decoration: none;
+}
+
+.fecs-nav .nav-list .nav-item.cur:hover a {
+    background-color: #282828;
+    cursor: default;
+}
+
+.fecs-nav .menu-list {
+    animation: changeOpacity 0.2s;
+    background-color: #1f1f1f;
+    display: none;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50px;
+    width: 220px;
+    z-index: 100;
+}
+
+.fecs-nav .menu-list .menu-item {
+    position: relative;
+}
+
+.fecs-nav .menu-list .menu-item:hover .menu-link,
+.fecs-nav .menu-list .menu-item.cur .menu-link {
+    background-color: #2891d3;
+    color: #fff;
+}
+
+.fecs-nav .menu-list .menu-item:hover .menu-link span,
+.fecs-nav .menu-list .menu-item.cur .menu-link span {
+    color: #a9dbfa;
+}
+
+.fecs-nav .menu-list .menu-item:hover .menu-link .arrow-right,
+.fecs-nav .menu-list .menu-item.cur .menu-link .arrow-right {
+    opacity: 1;
+}
+
+.fecs-nav .menu-list .menu-item:hover .menu-link.select .check,
+.fecs-nav .menu-list .menu-item.cur .menu-link.select .check {
+    opacity: 1;
+}
+
+.fecs-nav .menu-list .menu-item a {
+    color: #999;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px 0 25px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.1s;
+}
+
+.fecs-nav .menu-list .menu-item a span {
+    color: #666;
+    float: right;
+    transition: color 0.1s;
+}
+
+.fecs-nav .menu-list .menu-item a .arrow-right {
+    background: url("../img/icon_editor.png") -125px -25px no-repeat;
+    height: 10px;
+    opacity: 0.4;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    transition: opacity 0.1s;
+    width: 10px;
+}
+
+.fecs-nav .menu-list .menu-item a.select .check {
+    background: url("../img/icon_editor.png") -125px -50px no-repeat;
+    height: 14px;
+    left: 8px;
+    opacity: 0.4;
+    position: absolute;
+    top: 21px;
+    transition: opacity 0.1s;
+    width: 14px;
+}
+
+.fecs-nav .menu-list .menu-item .menu-sub-list {
+    animation: changeOpacity 0.2s;
+    background-color: #1f1f1f;
+    display: none;
+    left: 220px;
+    min-width: 100px;
+    position: absolute;
+    top: 0;
+}
+
+.fecs-nav .menu-list .menu-item .menu-sub-list .menu-sub-link:hover {
+    background-color: #2891d3;
+    color: #fff;
+}
+
+.fecs-nav .menu-list .menu-item .menu-sub-list .menu-sub-link:hover span {
+    color: #a9dbfa;
+}
+
+.fecs-nav .menu-list .menu-item .menu-sub-list .menu-sub-link:hover .arrow-right {
+    opacity: 1;
+}
+
+.fecs-nav .menu-list .menu-item .menu-sub-list .menu-sub-link:hover.select .check {
+    opacity: 1;
+}
+
+.fecs-console-wrap {
+    background-color: #282828;
+    border: 4px solid #232323;
+    border-left: 0;
+    border-right: 0;
+}
+
+.fecs-console {
+    color: #999;
+    font-size: 12px;
+    line-height: 1.4;
+    padding: 5px 15px;
+    white-space: pre;
+}
+
+.fecs-console .warn {
+    color: #c7c327;
+}
+
+.fecs-console .err {
+    color: #c71e12;
+}
+
+.fecs-console .info {
+    color: #00c120;
+}
+
+.menu-btn {
+    display: block;
+    height: 50px;
+    transition: background-color 0.1s;
+    width: 50px;
+}
+
+.menu-btn i {
+    background: url("../img/icon_editor.png") -150px -50px no-repeat;
+    display: block;
+    height: 50px;
+    opacity: 0.2;
+    transition: opacity 0.1s;
+    width: 50px;
+}
+
+.menu-btn:hover,
+.menu-btn.cur {
+    background-color: #2891d3;
+}
+
+.menu-btn:hover i,
+.menu-btn.cur i {
+    opacity: 1;
+}
+/* biz end */

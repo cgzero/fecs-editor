@@ -1,0 +1,21 @@
+{
+    "name": "FECS Editor",
+    "description": "launchpad of your Google Apps",
+    "version": "1.0",
+    "icons": {
+        "19": "./src/img/icon19.png",
+        "48": "./src/img/icon48.png",
+        "128": "./src/img/icon128.png"
+    },
+    "app": {
+        "background": {
+            "scripts": [
+                "./src/background.js"
+            ]
+        }
+    },
+    "permissions": [
+        "http://fecs.baidu.com/"
+    ],
+    "manifest_version": 2
+}

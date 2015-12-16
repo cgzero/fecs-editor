@@ -1,10 +1,16 @@
 /**
- * @file api js
+ * @file FECS Editor main
  * @author cgzero(cgzero@cgzero.com)
- * @date 2015-10-15
+ * @date 2015-12-17
  */
 (function () {
 
+    /**
+     * FECS 主域
+     *
+     * @const
+     * @type {string}
+     */
     var FECS_HOST = 'http://fecs.baidu.com';
 
     /**
@@ -322,44 +328,23 @@
 
         // 窗口尺寸变化时的处理函数
         var resizeEditor = function () {
-            if ($('.fecs-editor-wrap').hasClass('full')) {
-                var restOfHeight = 150;
+            var restOfHeight = 150;
 
-                if ($(window).width() < 700) {
-                    restOfHeight = 140;
-                }
-
-                $('.fecs-editor').height($(window).height() - restOfHeight);
-
+            if ($(window).width() < 700) {
+                restOfHeight = 140;
             }
-            else {
-                $('.fecs-editor').height(500);
-            }
+
+            $('.fecs-editor').height($(window).height() - restOfHeight);
 
             $.each(editorMap, function (key, editor) {
                 editor.resize();
             });
         };
 
+        // 初始化强制触发
+        resizeEditor();
         // 窗口尺寸改变时绑定事件
         $(window).resize(resizeEditor);
-
-        // 最大最小化按钮
-        $('.full-screen-btn').on('click', function () {
-            var self = $(this);
-            if (!self.hasClass('full')) {
-                $('.fecs-editor-wrap').addClass('full');
-                self.addClass('full');
-                resizeEditor();
-            }
-            else {
-                $('.fecs-editor-wrap').removeClass('full');
-                self.removeClass('full');
-                // 定位到编辑器头部的位置
-                $(window).scrollTop($('.fecs-nav').offset().top);
-                resizeEditor();
-            }
-        });
 
         // 点击展开、隐藏菜单
         $('.menu-btn').on('click', function (evt) {

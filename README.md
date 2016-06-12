@@ -2,6 +2,7 @@
 
 使用FECS帮助你快速检查、格式化代码的编辑器
 
+下载地址：[点此下载](https://chrome.google.com/webstore/detail/jinjgfophhifgdfocpdlbgklblcmkffp)
 
 更新历史：
 

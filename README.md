@@ -1,12 +1,8 @@
 # FECS Editor
 
-![](https://raw.githubusercontent.com/cgzero/fecs-editor/master/tmp/screen-shot-1.jpg)
+使用FECS帮助你快速检查、格式化代码的编辑器。[点此下载](https://chrome.google.com/webstore/detail/jinjgfophhifgdfocpdlbgklblcmkffp)
 
-## 简介
-
-使用FECS帮助你快速检查、格式化代码的编辑器
-
-下载地址：[点此下载](https://chrome.google.com/webstore/detail/jinjgfophhifgdfocpdlbgklblcmkffp)
+![](tmp/screen-shot-1.jpg)
 
 ## 更新历史
 

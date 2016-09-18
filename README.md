@@ -1,6 +1,6 @@
 # FECS Editor
 
-FECS Editor 编辑器使用了 FECS，帮助你快速检查、格式化代码。[点此下载](https://chrome.google.com/webstore/detail/jinjgfophhifgdfocpdlbgklblcmkffp)
+FECS Editor 编辑器是一款 Chrome 应用，它使用了 FECS，帮助你快速检查、格式化代码。[点此下载](https://chrome.google.com/webstore/detail/jinjgfophhifgdfocpdlbgklblcmkffp)
 
 ![](tmp/screen-shot-1.jpg)
 
